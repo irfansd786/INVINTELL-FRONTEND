@@ -1,0 +1,77 @@
+.actions-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.actions-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.actions-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.action-card {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: 2px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card-critical {
+  border-left: 3px solid var(--color-red);
+}
+
+.action-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.act-cat-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.act-title-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 2px;
+}
+
+.act-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-card-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-light);
+  padding-top: 16px;
+}
+
+.act-conf-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.controls-buttons-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

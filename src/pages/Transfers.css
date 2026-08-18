@@ -1,0 +1,121 @@
+.transfers-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.transfers-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.transfers-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.trf-card {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: 2px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trf-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.trf-id-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.trf-product-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 2px;
+}
+
+.trf-flow-box {
+  display: grid;
+  grid-template-columns: 1fr 180px 1fr;
+  gap: 16px;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  padding: 16px;
+  align-items: center;
+}
+
+.tf-hub-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tf-hub-lbl {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.tf-hub-name {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.tf-cov-lbl {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.tf-arrow-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.tf-qty-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background-color: var(--text-primary);
+  color: var(--text-inverse);
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.tf-arrow-icon {
+  color: var(--text-primary);
+}
+
+.trf-card-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-light);
+  padding-top: 16px;
+}
+
+.trf-meta-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 850px) {
+  .trf-flow-box {
+    grid-template-columns: 1fr;
+  }
+}

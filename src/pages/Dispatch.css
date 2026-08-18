@@ -1,0 +1,15 @@
+.dispatch-page-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.kpi-strip-dispatch {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .kpi-strip-dispatch {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

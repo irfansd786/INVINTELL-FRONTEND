@@ -1,0 +1,69 @@
+.today-page-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.today-header-v2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.kpi-strip-today {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.today-insights-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.insight-card {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-risk-border {
+  border-left: 3px solid var(--color-red);
+}
+
+.ic-lbl {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ic-val {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.ic-sub {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.table-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 1024px) {
+  .kpi-strip-today {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .today-insights-bar {
+    grid-template-columns: 1fr;
+  }
+}

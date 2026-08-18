@@ -1,0 +1,11 @@
+.suppliers-page-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.suppliers-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

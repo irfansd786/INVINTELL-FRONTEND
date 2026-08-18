@@ -1,0 +1,19 @@
+.products-page-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.products-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .products-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

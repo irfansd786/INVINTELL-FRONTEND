@@ -1,0 +1,77 @@
+.scenarios-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.scenario-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sim-controls-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  padding: 16px;
+}
+
+.slider-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sim-slider {
+  width: 100%;
+  accent-color: var(--text-primary);
+  cursor: pointer;
+}
+
+.sim-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.sim-cmp-card {
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-subtle);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cmp-val {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cmp-sub {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.sim-cmp-arrow {
+  display: flex;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+@media (max-width: 950px) {
+  .scenarios-grid {
+    grid-template-columns: 1fr;
+  }
+}

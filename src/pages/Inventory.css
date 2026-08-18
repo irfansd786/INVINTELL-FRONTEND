@@ -1,0 +1,26 @@
+.inventory-page-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.kpi-strip-inventory {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.inventory-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .kpi-strip-inventory {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .inventory-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

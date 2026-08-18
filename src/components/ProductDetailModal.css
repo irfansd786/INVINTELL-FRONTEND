@@ -1,0 +1,305 @@
+/* INVINTELL Product Detail Modal Styles */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 24px;
+}
+
+.modal-content.product-detail-modal {
+  background-color: var(--bg-card, #111827);
+  border: 1px solid var(--border-color, #1f2937);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--text-primary, #f8fafc);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Header */
+.modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color, #1f2937);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--bg-card, #111827);
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.modal-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 2px 0 6px 0;
+  letter-spacing: -0.3px;
+}
+
+.modal-subtitle-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-secondary, #94a3b8);
+}
+
+.modal-sku {
+  font-family: monospace;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #e2e8f0;
+}
+
+.bullet-sep {
+  color: #64748b;
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary, #94a3b8);
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.modal-close-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Body */
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Modal KPI Grid / Row */
+.modal-kpi-row, .modal-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.modal-kpi-card, .modal-kpi-item {
+  border: 1px solid var(--border-color, #1f2937);
+  padding: 14px 16px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kpi-label, .kpi-lbl {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--text-muted, #64748b);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.kpi-value, .kpi-val {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: monospace;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.kpi-value small {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94a3b8;
+  font-family: sans-serif;
+}
+
+.text-green {
+  color: #10b981 !important;
+}
+
+/* Risk Banner */
+.modal-risk-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.banner-red {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+}
+
+.banner-orange {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+}
+
+/* Two Column Section Layout */
+.modal-two-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-block {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-color, #1f2937);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.block-title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color, #1f2937);
+}
+
+/* Warehouse Stock Distribution Table */
+.wh-dist-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.wh-dist-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  text-align: left;
+}
+
+.wh-dist-table th {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #64748b;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-color, #1f2937);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.wh-dist-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: #e2e8f0;
+}
+
+/* Recent Stock Movements List */
+.movement-mini-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.movement-mini-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color, #1f2937);
+  border-radius: 6px;
+}
+
+.m-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.m-type-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.4px;
+}
+
+.type-in {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.type-out {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.m-ref {
+  display: block;
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+.m-sub {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.m-qty {
+  font-weight: 800;
+  font-size: 0.88rem;
+  font-family: monospace;
+  color: #f87171;
+}
+
+.m-qty.text-green {
+  color: #10b981;
+}
+
+@media (max-width: 600px) {
+  .modal-kpi-row, .modal-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

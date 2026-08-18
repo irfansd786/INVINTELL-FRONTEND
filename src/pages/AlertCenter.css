@@ -1,0 +1,83 @@
+.alerts-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.alerts-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.alerts-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.alert-card {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: 2px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.alert-unread {
+  background-color: var(--bg-subtle);
+}
+
+.card-sev-high {
+  border-left: 3px solid var(--color-red);
+}
+
+.alt-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.alt-meta-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.alt-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 2px;
+}
+
+.alt-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.alt-message-text {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.alt-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-light);
+  padding-top: 14px;
+}
+
+.alt-time {
+  font-size: 0.78rem;
+  font-family: monospace;
+  color: var(--text-muted);
+}

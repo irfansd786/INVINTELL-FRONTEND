@@ -1,0 +1,540 @@
+/* ==========================================================================
+   INVINTELL — ENTERPRISE GLOBAL DESIGN SYSTEM (60 / 30 / 10 RULE)
+   60% White / Light Workspace | 30% Black Neutrals & Dark Sidebar | 10% Green Accent
+   ========================================================================== */
+
+:root {
+  /* Color Tokens - Light Mode Default */
+  --bg-main: #FFFFFF;          /* 60% White Workspace */
+  --bg-subtle: #F7F8F7;        /* Secondary background */
+  --bg-card: #FFFFFF;
+  --bg-sidebar: #111111;       /* 30% Dark sidebar & neutrals */
+  --bg-active: #F0FDF4;
+  --bg-hover: #F7F8F7;
+
+  --text-primary: #111111;
+  --text-secondary: #5F6368;
+  --text-muted: #9CA3AF;
+  --text-inverse: #FFFFFF;
+
+  --border-light: #E5E7E5;
+  --border-dark: #111111;
+  --border-hover: #16A34A;
+
+  /* GREEN ACCENT (10% Brand / Action) */
+  --color-green: #16A34A;
+  --color-green-dark: #15803D;
+  --color-green-light: #DCFCE7;
+  --color-green-bg: #F0FDF4;
+
+  /* RED - ONLY for genuine critical risks/errors */
+  --color-red: #DC2626;
+  --color-red-bg: #FEF2F2;
+  --color-red-border: #FCA5A5;
+
+  /* YELLOW/ORANGE - ONLY for warnings */
+  --color-yellow: #D97706;
+  --color-yellow-bg: #FFFBEB;
+  --color-yellow-border: #FDE68A;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Enterprise Radii (Restrained 6px - 8px - 12px) */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Spacing System Tokens */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Layout Shell Specs */
+  --sidebar-width: 250px;
+  --nav-height: 64px;
+  --max-width: 100%;
+}
+
+/* Dark Mode Tokens Override */
+[data-theme="dark"] {
+  --bg-main: #141718;
+  --bg-subtle: #0D0F10;
+  --bg-card: #141718;
+  --bg-sidebar: #090A0B;
+  --bg-active: #064E3B;
+  --bg-hover: #1E2224;
+
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --text-inverse: #111111;
+
+  --border-light: #24292E;
+  --border-dark: #374151;
+
+  --color-green-light: #065F46;
+  --color-green-bg: #064E3B;
+
+  --color-red-bg: #450A0A;
+  --color-red-border: #7F1D1D;
+
+  --color-yellow-bg: #451A03;
+  --color-yellow-border: #78350F;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Application Layout Shell */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+  background-color: var(--bg-subtle);
+  transition: margin-left 0.25s ease, width 0.25s ease, background-color 0.2s ease;
+}
+
+/* Desktop layout states */
+@media (min-width: 901px) {
+  .app-layout.sidebar-is-open .main-wrapper {
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+  }
+
+  .app-layout.sidebar-is-closed .main-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  padding: 28px 32px 60px 32px;
+  margin-top: var(--nav-height);
+}
+
+/* Header & Typography Defaults */
+h1.page-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+p.page-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.section-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+/* Enterprise Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-green);
+  color: #FFFFFF;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-green-dark);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-primary);
+  background-color: var(--bg-subtle);
+}
+
+/* Minimal Table Styles */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: var(--bg-main);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.data-table th {
+  padding: 12px 16px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background-color: var(--bg-subtle);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.data-table td {
+  padding: 14px 16px;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.data-table tbody tr {
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--bg-hover);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+.badge-green {
+  background-color: var(--color-green-light);
+  color: #10B981;
+  border: 1px solid #065F46;
+}
+
+.badge-normal {
+  background-color: var(--bg-subtle);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+}
+
+.badge-warning {
+  background-color: var(--color-yellow-bg);
+  color: var(--color-yellow);
+  border: 1px solid var(--color-yellow-border);
+}
+
+.badge-risk {
+  background-color: var(--color-red-bg);
+  color: var(--color-red);
+  border: 1px solid var(--color-red-border);
+  font-weight: 700;
+}
+
+/* Card Components */
+.v2-block {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 20px 24px;
+  width: 100%;
+}
+
+.v2-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.v2-section-sub {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+/* Segmented Filter Control */
+.segmented-filter {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  gap: 2px;
+}
+
+.segmented-btn {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 5px 12px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.segmented-btn:hover {
+  color: var(--text-primary);
+}
+
+.segmented-btn.active {
+  background-color: var(--color-green);
+  color: #FFFFFF;
+}
+
+.filter-count {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter-count-red {
+  background-color: var(--color-red-bg);
+  color: var(--color-red);
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  width: 100%;
+}
+
+.search-icon {
+  color: var(--text-secondary);
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    padding: 20px 16px;
+  }
+}
+
+/* ==========================================================================
+   RECHARTS TOOLTIP VISIBILITY FIX (HIGH-CONTRAST READABILITY)
+   ========================================================================== */
+.recharts-default-tooltip {
+  background-color: #1E293B !important;
+  border: 1px solid #334155 !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.recharts-tooltip-label {
+  color: #F8FAFC !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  margin-bottom: 4px !important;
+}
+
+.recharts-tooltip-item {
+  color: #F8FAFC !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 2px 0 !important;
+}
+
+.recharts-tooltip-item-name,
+.recharts-tooltip-item-value,
+.recharts-tooltip-item-list {
+  color: #F8FAFC !important;
+}
+
+/* Color & Text Utility Classes for Dark/Light Theme Visibility */
+.text-green { color: var(--color-green) !important; }
+.text-red { color: var(--color-red) !important; }
+.text-muted { color: var(--text-muted) !important; }
+.text-dark { color: var(--text-primary) !important; }
+
+.tag-subtle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-primary) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   GLOBAL SELECT & DROPDOWN OPTION VISIBILITY FIX (DARK & LIGHT MODES)
+   Fixes invisible white-on-white text in dark mode option menus across all browsers
+   ========================================================================== */
+select {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: var(--color-green);
+}
+
+select option,
+.top-wh-select option,
+.arc-select option,
+.filter-select option,
+option {
+  background-color: var(--bg-main) !important;
+  color: var(--text-primary) !important;
+  padding: 8px 12px !important;
+}
+
+/* Explicit Dark Theme Option Visibility Rule */
+[data-theme="dark"] select option,
+[data-theme="dark"] option,
+.dark select option,
+.dark option,
+body[data-theme="dark"] select option,
+body[data-theme="dark"] option {
+  background-color: #1E2224 !important; /* Solid dark slate background */
+  color: #F9FAFB !important;            /* Pure white high-contrast text */
+}
+
+/* Explicit Light Theme Option Visibility Rule */
+[data-theme="light"] select option,
+[data-theme="light"] option,
+.light select option,
+.light option,
+body[data-theme="light"] select option,
+body[data-theme="light"] option {
+  background-color: #FFFFFF !important; /* Pure white background */
+  color: #111111 !important;            /* Pure dark high-contrast text */
+}
+
+/* ==========================================================================
+   ACCESSIBILITY HARDENING STYLES
+   ========================================================================== */
+:focus-visible {
+  outline: 2px solid var(--color-green) !important;
+  outline-offset: 2px !important;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-green) !important;
+  outline-offset: 2px !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+

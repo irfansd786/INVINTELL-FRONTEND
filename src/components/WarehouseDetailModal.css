@@ -1,0 +1,140 @@
+.wh-detail-modal {
+  max-width: 740px;
+}
+
+.wh-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.wh-kpi-card {
+  border: 1px solid var(--border-light);
+  padding: 14px;
+  background-color: var(--bg-subtle);
+  display: flex;
+  flex-direction: column;
+}
+
+.wh-capacity-block {
+  border: 1px solid var(--border-light);
+  padding: 16px;
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wh-capacity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cap-lbl {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.cap-val {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.wh-progress-track {
+  width: 100%;
+  height: 8px;
+  background-color: var(--bg-active);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.wh-progress-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.fill-normal {
+  background-color: var(--text-primary);
+}
+
+.fill-warning {
+  background-color: var(--color-red);
+}
+
+.wh-section {
+  border-top: 1px solid var(--border-light);
+  padding-top: 16px;
+}
+
+.wh-section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.wh-risks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wh-risk-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background-color: var(--color-red-bg);
+  border: 1px solid var(--color-red-border);
+  font-size: 0.82rem;
+}
+
+.wh-risk-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.wh-risk-info strong {
+  color: var(--text-primary);
+}
+
+.wh-risk-info span {
+  color: #7F1D1D;
+  font-size: 0.78rem;
+}
+
+.wh-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wh-hist-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  font-size: 0.82rem;
+}
+
+.hist-prod {
+  font-weight: 600;
+  flex: 1;
+  margin: 0 16px;
+}
+
+@media (max-width: 650px) {
+  .wh-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

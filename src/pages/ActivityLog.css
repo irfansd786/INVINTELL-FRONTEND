@@ -1,0 +1,11 @@
+.activity-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.activity-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

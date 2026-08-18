@@ -1,0 +1,78 @@
+.settings-page-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.settings-form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.status-grid-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  padding: 16px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.st-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.82rem;
+}
+
+.st-lbl {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.st-val {
+  color: var(--text-primary);
+}
+
+.settings-footer-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 20px;
+}
+
+.save-success-text {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #10B981;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 600px) {
+  .form-grid, .status-grid-box {
+    grid-template-columns: 1fr;
+  }
+}

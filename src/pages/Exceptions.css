@@ -1,0 +1,15 @@
+.exceptions-page-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.kpi-strip-exceptions {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .kpi-strip-exceptions {
+    grid-template-columns: 1fr;
+  }
+}

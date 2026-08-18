@@ -1,0 +1,98 @@
+.barcode-display-section {
+  border: 1px solid #27272A;
+  background-color: #09090B;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.barcode-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.barcode-title-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #A1A1AA;
+  text-transform: uppercase;
+}
+
+.barcode-action-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.barcode-btn {
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.barcode-btn.btn-scan {
+  background-color: #064E3B;
+  color: #34D399;
+  border: 1px solid #10B981;
+}
+
+.barcode-btn.btn-scan:hover {
+  background-color: #047857;
+  color: #FFFFFF;
+}
+
+.barcode-btn.btn-secondary {
+  background-color: #18181B;
+  color: #D4D4D8;
+  border: 1px solid #27272A;
+}
+
+.barcode-btn.btn-secondary:hover {
+  background-color: #27272A;
+  color: #FFFFFF;
+}
+
+.barcode-visual-card {
+  background-color: #000000;
+  border: 1px solid #18181B;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.barcode-svg-container {
+  background-color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+}
+
+.barcode-svg {
+  display: block;
+}
+
+.barcode-digits-display {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #10B981;
+}

@@ -1,0 +1,57 @@
+.cycle-count-modal {
+  max-width: 820px !important;
+  width: 95% !important;
+}
+
+.cc-audit-strip {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 12px 16px;
+}
+
+.audit-num {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--primary-accent, #10B981);
+}
+
+.audit-wh {
+  font-size: 13px;
+  color: var(--text-secondary, #A1A1AA);
+  margin-left: 6px;
+}
+
+.barcode-code-cell {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  color: #34D399;
+}
+
+.cc-input-field {
+  width: 90px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  border-radius: 4px;
+  font-weight: 700;
+  outline: none;
+}
+
+.cc-input-field:focus {
+  border-color: #10B981;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.empty-cc-box {
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}

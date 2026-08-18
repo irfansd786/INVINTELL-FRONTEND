@@ -1,0 +1,111 @@
+.demo-control-bar {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-sidebar);
+  border-top: 1px solid #1F2937;
+  z-index: 95;
+  padding: 8px 0;
+}
+
+.demo-bar-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.demo-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+}
+
+.demo-badge-lbl {
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+.demo-badge-sub {
+  color: #6B7280;
+}
+
+.demo-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.demo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #1F2937;
+  color: #E5E7EB;
+  border: 1px solid #374151;
+  padding: 5px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.demo-btn:hover {
+  background-color: #374151;
+  color: #FFFFFF;
+}
+
+.demo-btn-red {
+  color: #F87171;
+  border-color: #7F1D1D;
+}
+
+.demo-btn-danger {
+  background-color: #7F1D1D;
+  color: #FFFFFF;
+  border-color: #991B1B;
+}
+
+.demo-btn-danger:hover {
+  background-color: #991B1B;
+}
+
+.spin-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.reset-modal-box {
+  width: 480px;
+  max-width: 90%;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .demo-bar-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

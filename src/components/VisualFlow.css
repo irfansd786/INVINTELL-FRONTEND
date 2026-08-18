@@ -1,0 +1,232 @@
+.visual-flow-wrapper {
+  margin: 32px 0 48px 0;
+  padding: 40px 24px;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: 2px;
+}
+
+.flow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.flow-node {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-dark);
+  padding: 12px 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.flow-node:hover {
+  background-color: var(--bg-active);
+}
+
+.enterprise-node {
+  padding: 14px 36px;
+  font-size: 0.9rem;
+}
+
+.connector-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 32px;
+  position: relative;
+  justify-content: center;
+}
+
+.connector-vertical .line {
+  width: 1px;
+  height: 100%;
+  background-color: var(--border-dark);
+}
+
+.connector-vertical .arrow-head {
+  color: var(--text-primary);
+  margin-top: -8px;
+}
+
+.warehouses-row {
+  display: flex;
+  gap: 24px;
+}
+
+.warehouse-node {
+  border: 1px solid var(--border-light);
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 160px;
+  background-color: var(--bg-main);
+}
+
+.warehouse-node:hover {
+  border-color: var(--border-dark);
+}
+
+.node-sub {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  text-transform: none;
+}
+
+.data-stream-node {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 6px 16px;
+  border: 1px dashed var(--border-light);
+  background-color: var(--bg-main);
+}
+
+.platform-engine-box {
+  background-color: var(--text-primary);
+  color: var(--text-inverse);
+  padding: 18px 36px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 2px;
+  width: 100%;
+  max-width: 520px;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.engine-icon {
+  color: var(--text-inverse);
+  flex-shrink: 0;
+}
+
+.engine-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.engine-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.engine-subtitle {
+  font-size: 0.75rem;
+  color: #A1A1AA;
+  font-weight: 400;
+}
+
+.connector-split {
+  height: 36px;
+  width: 100%;
+  max-width: 760px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.connector-split .line-center {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 18px;
+  background-color: var(--border-dark);
+  transform: translateX(-50%);
+}
+
+.connector-split .line-horizontal {
+  position: absolute;
+  top: 18px;
+  left: 16%;
+  right: 16%;
+  height: 1px;
+  background-color: var(--border-dark);
+}
+
+.outputs-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.output-card {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 2px;
+  transition: border-color 0.15s ease;
+}
+
+.output-card:hover {
+  border-color: var(--border-dark);
+}
+
+.output-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.risk-tag {
+  color: var(--color-red);
+}
+
+.output-question {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.output-stat {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 4px;
+}
+
+.risk-stat {
+  color: var(--color-red);
+}
+
+@media (max-width: 768px) {
+  .outputs-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .platform-engine-box {
+    padding: 14px 20px;
+  }
+
+  .connector-split {
+    display: none;
+  }
+}

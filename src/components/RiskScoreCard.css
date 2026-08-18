@@ -1,0 +1,120 @@
+.risk-score-card {
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-main);
+  padding: 16px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-high-risk {
+  border-color: var(--color-red-border);
+  background-color: var(--color-red-bg);
+}
+
+.rsc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rsc-lbl {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.rsc-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.level-critical { background: var(--color-red-bg); color: var(--color-red); border: 1px solid var(--color-red-border); }
+.level-high { background: var(--color-red-bg); color: var(--color-red); }
+.level-medium { background: var(--bg-subtle); color: var(--text-primary); border: 1px solid var(--border-light); }
+.level-low { background: var(--bg-subtle); color: var(--text-secondary); }
+
+.rsc-meter-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rsc-score-val {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.score-num {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.score-denom {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.rsc-progress-bar {
+  height: 6px;
+  background-color: var(--border-light);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.rsc-progress-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.fill-critical, .fill-high { background-color: var(--color-red); }
+.fill-medium { background-color: var(--text-primary); }
+.fill-low { background-color: var(--text-secondary); }
+
+.rsc-factors-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 10px;
+}
+
+.factors-hdr {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.factors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.factor-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+}
+
+.factor-pts {
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--text-primary);
+  min-width: 28px;
+}
+
+.factor-name {
+  color: var(--text-secondary);
+}

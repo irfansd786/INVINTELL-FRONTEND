@@ -1,0 +1,90 @@
+.warehouses-page-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.wh-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.wh-card-v2 {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.wh-card-v2:hover {
+  border-color: var(--color-green);
+}
+
+.wh-card-hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.wh-code-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.wh-name-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 2px;
+}
+
+.wh-loc-text {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.wh-metrics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  padding: 12px 14px;
+}
+
+.wh-m-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.wh-m-row strong {
+  color: var(--text-primary);
+}
+
+.wh-card-ftr {
+  border-top: 1px solid var(--border-light);
+  padding-top: 12px;
+}
+
+.wh-link {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+  .wh-grid-v2 {
+    grid-template-columns: 1fr;
+  }
+}
